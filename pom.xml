@@ -36,9 +36,9 @@
         <release-plugin.version>2.5.3</release-plugin.version>
         <release-plugin.scm.git.version>1.11.2</release-plugin.scm.git.version>
 
-        <maven.compiler.release>11</maven.compiler.release>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <!--maven.compiler.release>9</maven.compiler.release-->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
