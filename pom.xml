@@ -7,27 +7,27 @@
     <artifactId>microprofile-config-extension</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>${root.project.name}</name>
+    <name>JUnit Microprofile Config Extension</name>
+    <description>JUnit 5 extension to resolve microprofile @ConfigProperty in unit tests.</description>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
 
     <issueManagement>
-        <system>gitlab</system>
-        <url>https://gitlab.com/home-priv/microprofile-config-extension/issues</url>
+        <system>github</system>
+        <url>https://github.com/morphy76/microprofile-config-extension/issues</url>
     </issueManagement>
 
-    <ciManagement>
-        <system>gitlab</system>
-        <url>https://gitlab.com/home-priv/microprofile-config-extension/pipelines</url>
-    </ciManagement>
-
     <scm>
-        <connection>scm:git:git@gitlab.com:home-priv/microprofile-config-extension.git</connection>
-        <developerConnection>scm:git:git@gitlab.com:home-priv/microprofile-config-extension.git</developerConnection>
+        <connection>scm:git:git@github.com:morphy76/microprofile-config-extension.git</connection>
+        <developerConnection>scm:git:git@github.com:morphy76/microprofile-config-extension.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
     <properties>
-        <root.project.name>JUnit Microprofile Config Extension</root.project.name>
-
         <resources-plugin.version>3.2.0</resources-plugin.version>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
         <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
