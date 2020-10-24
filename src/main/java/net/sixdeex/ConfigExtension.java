@@ -27,6 +27,10 @@ public class ConfigExtension implements TestInstancePostProcessor {
 			  
 	}
 
+	private boolean isConfigAnnotated(Field field) {
+		return field.isAnnotationPresent(ConfigProperty.class);
+	}
+
 	private void set(Field field, Object testInstance, Config cfg) {
 
 		final ConfigProperty  cfgProperty = field.getAnnotation(ConfigProperty.class);
@@ -70,9 +74,5 @@ public class ConfigExtension implements TestInstancePostProcessor {
 		} else {
 			throw new NoSuchElementException();
 		}
-	}
-
-	private boolean isConfigAnnotated(Field field) {
-		return field.isAnnotationPresent(ConfigProperty.class);
 	}
 }
