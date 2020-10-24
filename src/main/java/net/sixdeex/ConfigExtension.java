@@ -68,8 +68,8 @@ public class ConfigExtension implements TestInstancePostProcessor {
 
 	private Object fetchDefault(Class<?> clazz, Config cfg, String defaultValue) {
 		
-		Converter<?> converter = ((SmallRyeConfig) cfg).getConverter(clazz);
 		if(defaultValue != null) {
+			Converter<?> converter = ((SmallRyeConfig) cfg).getConverter(clazz);
 			return converter.convert(defaultValue);
 		} else {
 			throw new NoSuchElementException();
