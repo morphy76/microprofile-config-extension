@@ -1,3 +1,3 @@
 # microprofile-config-extension
 
-Resolves microprofile @ConfigProperty in unit tests.
+JUnit 5 extension to resolve microprofile @ConfigProperty in unit tests.
