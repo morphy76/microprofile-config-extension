@@ -1,37 +1,49 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/morphy76/microprofile-config-extension/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+JUnit 5 extension to resolve microprofile @ConfigProperty in unit tests.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Example
 
-### Markdown
+```java
+package io.github.morphy76;
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-```markdown
-Syntax highlighted code block
+import org.eclipse.microprofile.config.Config;
+import org.eclipse.microprofile.config.ConfigProvider;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
-# Header 1
-## Header 2
-### Header 3
+@ExtendWith(ConfigExtension.class)
+class ConfigExtensionTest {
+    
+    @ConfigProperty(name = "annotated.property")
+    String annotatedProperty;
+    
+    @ConfigProperty(name = "use.default.string.property", defaultValue = "string.is.ok")
+    String useStringDefault;
+    
+    @ConfigProperty(name = "use.default.long.property", defaultValue = "1000")
+    long useLongDefault;
 
-- Bulleted
-- List
+    @Test
+    @DisplayName("Assert value for annotated property without default")
+    void testAnnotatedPropertyWithoutDefault() throws Exception {
+        assertEquals("annotated.property", annotatedProperty);
+    }
 
-1. Numbered
-2. List
+    @Test
+    @DisplayName("Assert value for annotated string property with default")
+    void testAnnotatedStringPropertyWithDefault() throws Exception {
+        assertEquals("string.is.ok", useStringDefault);
+    }
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+    @Test
+    @DisplayName("Assert value for annotated long property with default")
+    void testAnnotatedLongPropertyWithDefault() throws Exception {
+        assertEquals(1_000L, useLongDefault);
+    }
+}
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/morphy76/microprofile-config-extension/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
