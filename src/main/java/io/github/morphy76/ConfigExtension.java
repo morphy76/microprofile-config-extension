@@ -50,6 +50,8 @@ public class ConfigExtension implements TestInstancePostProcessor {
 			try {
 				field.set(testInstance, useValue);
 			} catch (IllegalArgumentException | IllegalAccessException e) {
+				// TODO
+			} finally {
 				field.setAccessible(accessible);
 			}
 		}
