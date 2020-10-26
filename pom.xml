@@ -194,7 +194,6 @@
 					<serverId>ossrh</serverId>
 					<nexusUrl>https://oss.sonatype.org</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
-					<buildPromotionProfileId>io.github.morphy76</buildPromotionProfileId>
 					<stagingProfileId>io.github.morphy76</stagingProfileId>
 				</configuration>
 			</plugin>
