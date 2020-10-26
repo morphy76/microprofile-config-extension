@@ -32,12 +32,12 @@
 
 	<distributionManagement>
 		<repository>
-			<id>releases</id>
+			<id>ossrh</id>
 			<name>sonatype-releases</name>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
 		</repository>
 		<snapshotRepository>
-			<id>snapshots</id>
+			<id>ossrh</id>
 			<name>sonatype-snapshots</name>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
