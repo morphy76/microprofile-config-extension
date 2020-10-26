@@ -9,10 +9,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import io.github.morphy76.ConfigExtension;
-
 @ExtendWith(ConfigExtension.class)
-public class ConfigExtensionTest {
+class ConfigExtensionTest {
     
     @ConfigProperty(name = "annotated.property") String annotatedProperty;
     @ConfigProperty(name = "use.default.string.property", defaultValue = "string.is.ok") String useStringDefault;
