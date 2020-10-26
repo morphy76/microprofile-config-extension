@@ -50,7 +50,7 @@ public class ConfigExtension implements TestInstancePostProcessor {
 		final Object  useValue   = extractValue(field.getType(), cfg, cfgProperty, cfgValue);
 
 		synchronized(testInstance.getClass()) {
-			final boolean accessible = field.canAccess(testInstance);
+			final boolean accessible = field.isAccessible();
 			field.setAccessible(true);
 			try {
 				field.set(testInstance, useValue);

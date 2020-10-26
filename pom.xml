@@ -55,7 +55,7 @@
 		<release-plugin.version>2.5.3</release-plugin.version>
 		<release-plugin.scm.git.version>1.11.2</release-plugin.scm.git.version>
 
-		<!--maven.compiler.release>9</maven.compiler.release -->
+		<!-- maven.compiler.release>9</maven.compiler.release -->
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
