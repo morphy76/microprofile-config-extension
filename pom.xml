@@ -33,12 +33,10 @@
 	<distributionManagement>
 		<repository>
 			<id>ossrh</id>
-			<name>sonatype-releases</name>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
 		</repository>
 		<snapshotRepository>
 			<id>ossrh</id>
-			<name>sonatype-snapshots</name>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
@@ -193,7 +191,7 @@
 				<artifactId>nexus-staging-maven-plugin</artifactId>
 				<extensions>true</extensions>
 				<configuration>
-					<serverId>releases</serverId>
+					<serverId>ossrh</serverId>
 					<nexusUrl>https://oss.sonatype.org</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
