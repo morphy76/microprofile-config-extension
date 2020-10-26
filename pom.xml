@@ -50,8 +50,6 @@
 		<deploy-plugin.version>2.8.2</deploy-plugin.version>
 		<nexus-staging-plugin.version>1.6.8</nexus-staging-plugin.version>
 		<gpg-plugin.version>1.6</gpg-plugin.version>
-		<release-plugin.version>2.5.3</release-plugin.version>
-		<release-plugin.scm.git.version>1.11.2</release-plugin.scm.git.version>
 
 		<!-- maven.compiler.release>9</maven.compiler.release -->
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -151,10 +149,6 @@
 					<artifactId>nexus-staging-maven-plugin</artifactId>
 					<version>${nexus-staging-plugin.version}</version>
 				</plugin>
-				<plugin>
-					<artifactId>maven-release-plugin</artifactId>
-					<version>${release-plugin.version}</version>
-				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
@@ -193,33 +187,8 @@
 				<configuration>
 					<serverId>ossrh</serverId>
 					<nexusUrl>https://oss.sonatype.org</nexusUrl>
-					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+					<autoReleaseAfterClose>false</autoReleaseAfterClose>
 				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-release-plugin</artifactId>
-				<configuration>
-					<localCheckout>true</localCheckout>
-					<pushChanges>false</pushChanges>
-					<mavenExecutorId>forked-path</mavenExecutorId>
-					<arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <useReleaseProfile>false</useReleaseProfile>
-                    <releaseProfiles>release</releaseProfiles>
-                    <goals>deploy</goals>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.scm</groupId>
-						<artifactId>maven-scm-api</artifactId>
-						<version>${release-plugin.scm.git.version}</version>
-					</dependency>
-					<dependency>
-						<groupId>org.apache.maven.scm</groupId>
-						<artifactId>maven-scm-provider-gitexe</artifactId>
-						<version>${release-plugin.scm.git.version}</version>
-					</dependency>
-				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
@@ -238,6 +207,9 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
+                        <configuration>
+					        <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
+                        <configuration>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
