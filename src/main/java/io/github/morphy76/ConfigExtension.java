@@ -14,6 +14,11 @@ import org.junit.jupiter.api.extension.TestInstancePostProcessor;
 
 import io.smallrye.config.SmallRyeConfig;
 
+/**
+ * JUnit 5 extension to resolve microprofile @ConfigProperty in unit tests.
+ *
+ * @since 0.0.1
+ */
 public class ConfigExtension implements TestInstancePostProcessor {
 
 	@Override
