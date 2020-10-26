@@ -195,12 +195,9 @@
 
 	<profiles>
 		<profile>
-			<id>release-signed-artifacts</id>
+			<id>sign</id>
 			<activation>
-				<property>
-					<name>performRelease</name>
-					<value>true</value>
-				</property>
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			<build>
 				<plugins>
@@ -209,7 +206,7 @@
 						<artifactId>maven-gpg-plugin</artifactId>
                         <configuration>
 					        <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
-                        <configuration>
+						</configuration>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
