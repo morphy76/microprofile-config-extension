@@ -3,7 +3,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.sixdeex</groupId>
+    <groupId>io.github.morphy76</groupId>
     <artifactId>microprofile-config-extension</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
@@ -15,6 +15,7 @@
             <url>https://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
+    <url>https://morphy76.github.io/microprofile-config-extension/</url>
 
     <issueManagement>
         <system>github</system>

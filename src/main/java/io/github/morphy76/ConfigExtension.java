@@ -1,4 +1,4 @@
-package net.sixdeex;
+package io.github.morphy76;
 
 import java.lang.reflect.Field;
 import java.util.NoSuchElementException;
