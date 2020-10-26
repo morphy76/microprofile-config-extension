@@ -18,6 +18,14 @@
 		</license>
 	</licenses>
 	<url>https://morphy76.github.io/microprofile-config-extension/</url>
+	<developers>
+		<developer>
+			<id>morphy76</id>
+			<name>Riccardo Pasquini</name>
+			<email>riccardo.pasquini@gmail.com</email>
+			<timezone>Europe/Rome</timezone>
+		</developer>
+	</developers>
 
 	<issueManagement>
 		<system>github</system>
@@ -34,7 +42,7 @@
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
 		</snapshotRepository>
 	</distributionManagement>
 
