@@ -7,7 +7,7 @@
 
 	<groupId>io.github.morphy76</groupId>
 	<artifactId>microprofile-config-extension</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-Final</version>
 
 	<name>JUnit Microprofile Config Extension</name>
 	<description>JUnit 5 extension to resolve microprofile @ConfigProperty in unit tests.</description>
